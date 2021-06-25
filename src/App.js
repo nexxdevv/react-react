@@ -1,32 +1,28 @@
-import { useRoutes } from "react-router"
-import Footer from "./components/layout/Footer/Footer"
-import Navbar from "./components/layout/Navbar/Navbar"
-import AboutUs from "./pages/AboutUs"
-import ContactUs from "./pages/ContactUs"
-import Home from "./pages/Home/Home"
-import Notifications from "./pages/Notifications"
-import Projects from "./pages/Projects"
-import Services from "./pages/Services"
+import { useRoutes } from 'react-router'
+import Navbar from './components/layout/Navbar/Navbar'
+import Home from './pages/Home/Home'
+import Docs from './pages/Docs'
+import Tutorial from './pages/Tutorial'
+import Blog from './pages/Blog'
+import Community from './pages/Community'
 
 const routes = [
-    { path: "/", element: <Home /> },
-    { path: "/notifications", element: <Notifications /> },
-    { path: "/projects", element: <Projects /> },
-    { path: "/about-us", element: <AboutUs /> },
-    { path: "/contact-us", element: <ContactUs /> },
-    { path: "/services", element: <Services /> },
+	{ path: '/', element: <Home /> },
+	{ path: '/docs', element: <Docs /> },
+	{ path: '/tutorial', element: <Tutorial /> },
+	{ path: '/blog', element: <Blog /> },
+	{ path: '/community', element: <Community /> }
 ]
 
 const App = () => {
-    let element = useRoutes(routes)
+	let element = useRoutes(routes)
 
-    return (
-        <div>
-            <Navbar />
-            <div>{element}</div>
-            <Footer />
-        </div>
-    )
+	return (
+		<div>
+			<Navbar />
+			<div>{element}</div>
+		</div>
+	)
 }
 
 export default App

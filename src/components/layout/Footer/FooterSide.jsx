@@ -9,11 +9,10 @@ const StyledFooter = styled.footer`
 	#wrapper {
 		@media screen and (min-width: 768px) {
 			padding: 0 48px;
+			width: 70%;
 		}
 		@media screen and (min-width: 1280px) {
-			padding:  0;
-			max-width: 1250px;
-			margin: 0 auto;
+			padding:  0 90px;
 		}
 	}
 	
@@ -53,7 +52,7 @@ const Footer = () => {
 	return (
 		<StyledFooter className="py-10">
 			<div id="wrapper" className="px-5 xl:px-0">
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-7 ">
+				<div className="grid grid-cols-2 md:grid-cols-3  xl:grid-cols-4 gap-y-6 gap-x-7 ">
 					<div className=" flex flex-col capitalize">
 						<h3 className=" font-bold mb-4 uppercase">Docs</h3>
 						{docs.map((link) => (
